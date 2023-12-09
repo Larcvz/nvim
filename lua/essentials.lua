@@ -45,9 +45,12 @@ vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
 vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
 vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
 
-vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>") 
+-- 切换和关闭buffer
+vim.keymap.set("n", "<C-L>", "<cmd>bnext<CR>") 
+vim.keymap.set("n", "<C-H>", "<cmd>bprevious<CR>")
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>")
 
+-- 单行或多行移动
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
